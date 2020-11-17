@@ -1,0 +1,11 @@
+# ignore vscode config
+.vscode/
+.idea/
+
+
+# ignore the files
+*.zip
+*.png
+*.csv
+*.docx
+*.pyc

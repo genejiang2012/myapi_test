@@ -1,0 +1,13 @@
+sudo: false
+language: python
+python:
+  - 3.7
+  - 3.6
+install:
+  - pip install poetry
+  - poetry install -vvv
+script:
+  - poetry run pytest -vvv
+  - poetry run coverage run --source=mytest_api -m pytest -v
+after_success:
+  - poetry run coveralls
