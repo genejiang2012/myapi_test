@@ -8,6 +8,7 @@ authors = ["genejiang2012 <genejiang2012@outlook.com>"]
 python = "^3.6"
 pytest = "^6.1.2"
 requests = "^2.25.0"
+pytest-html = "^3.0.0"
 
 [tool.poetry.dev-dependencies]
 
