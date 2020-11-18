@@ -1,6 +1,12 @@
+import os
+from loguru import logger
+
 from mytest_api.httpbin import *
 from .conftest import *
 
+
+logger.add('../log/log_{time}.log', rotation='500 MB')
+logger.debug('this is the debug message')
 
 def test_version():
     from mytest_api import __version__
@@ -88,7 +94,8 @@ def test_httpbin_extract_cookies(init_session):
 
 
 def test_httpbin_login_status(init_session):
-    print("========init_session========", init_session)
+    logger.debug(init_session)
+  
     # step1: login and get the cookies
     TestHttpBinSetCookies().set_params(freeform='567').run(init_session)
 
